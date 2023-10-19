@@ -42,7 +42,7 @@
                 break;
             
             case 'dashboard':
-                if(!(isset($_SESSION['user']) && $_SESSION['user']['quyen']=='admin')){
+                if(!(isset($_SESSION['user']) && $_SESSION['user']['quyen']>=1)){
                     header("location: index.php");
                 }
                 $list_thongke = load_thongke_dm();

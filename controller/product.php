@@ -199,9 +199,9 @@
                 break;
 
             case 'admin_product': // (san pham)
-                if(!(isset($_SESSION['user']) && $_SESSION['user']['quyen']>=1)){
-                    header("location: index.php");
-                }
+                // if(!(isset($_SESSION['user']) && $_SESSION['user']['quyen']>=1)){
+                //     header("location: index.php");
+                // }
 
                 // if(isset($_GET['page']) && ($_GET['page'])!=""){
                 //     $soluong = count_products()['soluong'];
@@ -226,9 +226,9 @@
                 
 // case của bảng SẢN PHẨM
             case 'admin_add_product': //add sanr pham trong admin (trang con cua san pham)
-                if(!(isset($_SESSION['user']) && $_SESSION['user']['quyen']=='admin')){
-                    header("location: index.php");
-                }
+                // if(!(isset($_SESSION['user']) && $_SESSION['user']['quyen']=='admin')){
+                //     header("location: index.php");
+                // }
                 $data['dsdm'] = get_catagories();
 
 
@@ -281,9 +281,9 @@
 
         // case edit của bảng SẢN PHẨM
             case 'edit':
-                if(!(isset($_SESSION['user']) && $_SESSION['user']['quyen']=='admin')){
-                    header("location: index.php");
-                }
+                // if(!(isset($_SESSION['user']) && $_SESSION['user']['quyen']>=1)){
+                //     header("location: index.php");
+                // }
                 
                 $data['dsdm'] = get_catagories();
                 if(isset($_GET['id'])){
@@ -351,9 +351,9 @@
 
         // case xóa sản phẩm của bảng SẢN PHẨM
             case 'delete':
-                if(!(isset($_SESSION['user']) && $_SESSION['user']['quyen']=='admin')){
-                    header("location: index.php");
-                }
+                // if(!(isset($_SESSION['user']) && $_SESSION['user']['quyen']=='admin')){
+                //     header("location: index.php");
+                // }
                 include_once 'model/connect.php';
                 include_once 'model/product.php';
         
