@@ -4,10 +4,10 @@
                 <img src="view/img/bannerxx3.png" alt="">
             </div>
         </div>
-
-<div class="container-login">
-        <div class="login-reges">
-            
+<main>
+    <section>
+        <div class="container-login">
+            <div class="login-reges">
                 <div class="wrapper">
                     <div class="form-box register">
                         <h2>Registration</h2>
@@ -51,8 +51,6 @@
                         </form>
                     </div>
                 </div>
-
-
                 <div class="wrapper">
                     <span class="icon-close"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
                     <div class="form-box login">
@@ -86,7 +84,8 @@
                         </form>
                     </div>  
                 </div>
-                
-                
             </div> 
-        </div>
+        </div>  
+    </section>
+</main>
+

@@ -27,6 +27,44 @@
                     <td>   <a href="'.$linkdelete.'"><i class="fa-regular fa-trash-can" style="color: #ff0000;"></i></i></a></td>
                     </tr>
                     ';
+                
+                $i++; 
+                $stt++;
+                }
+            }
+            return $html_giohang;
+    }
+
+    function giohang_mobile(){
+        $html_giohang = '';
+        if(isset($_SESSION['giohang']) && is_array($_SESSION['giohang'])){
+            $stt = 1;
+            $tt=0;
+            $i = 0;
+            foreach ($_SESSION['giohang'] as  $item) {
+            extract($item);
+            $tt = $giasp * $soluong ;
+            $linkdelete = "index.php?mod=product&act=delcart&ind=".$i;
+            echo '
+            <div class="product_mobile">
+                <div class="product_img_mobile">
+                <img src="view/img/'.$anhsp.'" alt="">
+                </div>
+                <div class="product_name_mobile">
+                    <h4>'.$tensp.'</h4>
+                    <p>giá: '.number_format($giasp,"0",",",".").'</p>
+                    <div class="tanggiam_soluong">
+                    <a href="" class="cart_giam" onclick="giam(this)">-</a>
+                        <span>'.$soluong.'</span>
+                    <a href="" class="cart_tang" onclick="tang(this)">+</a></td>
+                    </div>
+                </div>
+                <div class="product_del_mobile">
+                <a href="'.$linkdelete.'"><i class="fa-regular fa-trash-can" style="color: #ff0000;"></i></i></a>
+                </div>
+            </div>
+            ';
+                
                 $i++; 
                 $stt++;
                 }

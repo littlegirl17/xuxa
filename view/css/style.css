@@ -31,7 +31,15 @@ body {
     padding-bottom: 20px;
 }
 /*---------------------------------------------------------------------------------------------------------------------------*/
-
+.table_mobile{
+    display: none;
+}
+.product_mobile{
+    display: none;
+}
+.table_mobile-product{
+    display: none;
+}
 /*-----------------------------------------------------banner----------------------------------------------------------------------*/
 .banner{
     position: relative;
@@ -373,7 +381,7 @@ table{
 }
 tr td{
     text-align: center;
-    padding: 20px 50px;
+   
     
 } 
 
@@ -428,7 +436,7 @@ tr td{
 
 /*-----SAN PHAM CART----------------------------------------------------------------------------------------------------------------------*/
 .product-cart {
-   
+    
 }
 .product-cart a{
     display: flex;
@@ -436,11 +444,13 @@ tr td{
     color: #000;
 }
 .product-cart img{
-    width: 40%;
-    height: 50px;
+    width: 60px;
+    padding: 5px 0;
     object-fit: cover;
 }
-
+.product-cart h3{
+   padding-left: 10px;
+}
 /**/
 .quantt {
     display: flex;
@@ -1783,7 +1793,11 @@ tr td{
     width: 1190px;
     margin: 0 auto;
 }
-
+.container-cart{
+    width: 1170px;
+    margin: 0 auto;
+    padding: 0px 10px;
+}
 
 #btn_bars{
     display: none;
@@ -1794,10 +1808,7 @@ tr td{
 }
 /**/
 
-.container{
-    width: 1170px;
-    margin: 0 auto;
-}
+
 
 header{
     background-color: #2A2B39; 
@@ -2334,6 +2345,9 @@ header{
     color: #ffffff;
     
 }
+.product_mobile{
+    display: none;
+}
 .container{
     width: 100%;
     margin: 0 auto;
@@ -2347,6 +2361,11 @@ header{
     width: 100%;
     padding: 0 100px;
     margin: 0 auto;
+}
+.container-cart{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 40px;
 }
 .header_center ul {
     display: flex;
@@ -2444,6 +2463,15 @@ nav.active{
     display: grid;
     grid-template-columns: 1fr 1fr ;
 }
+.title-product th{
+    padding: 0px 0px;
+}
+tr td{
+    padding-top: 10px;
+    padding-left: 0;
+    padding-bottom: 10px;
+    padding-right: 0;
+}
 }
 
 
@@ -2485,6 +2513,11 @@ nav.active{
         width: 100%;
         padding: 0 100px;
         margin: 0 auto;
+    }
+    .container-cart{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0px 40px;
     }
     .header_center ul {
         display: flex;
@@ -2584,6 +2617,18 @@ nav.active{
         width: 100%;
         justify-items: center;
     }
+   
+    .title-product th{
+        padding: 0px 0px;
+        
+    }
+    tr td{
+        padding-top: 10px;
+        padding-left: 0;
+        padding-bottom: 10px;
+        padding-right: 0;
+    }
+    
     .foo{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -2610,6 +2655,15 @@ nav.active{
 }
 .banner--texthome{
     display: none;
+}
+.table_desktop{
+    display: none;
+}
+.table_mobile{
+    display: block;
+}
+.table_mobile-product{
+    display: block;
 }
 .container2{
     width:100%;
@@ -2661,6 +2715,8 @@ nav.active{
 }
 .banner-cart img{
     padding-top: 20px;
+    width: 100%;
+    height: 200px;
     object-fit:contain;
 }
 .detail-left-one img{
@@ -2698,6 +2754,46 @@ nav.active{
     display: grid;
     grid-template-columns:  1fr ;
     padding-top: 50px;
+}
+.wrapper{
+    width: 100%;
+}
+.box-total{
+    float: left;
+    padding-top: 40px;
+}
+.box_voucher{
+    padding-left: 0px;
+    padding-top: 20px;
+}
+.total-btn{
+    margin-left: 0px;
+}
+.total {
+    width: 100%;
+}
+.table_mobile-product h4{
+    color: #000000;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(176, 176, 176);
+}
+.product_mobile{
+    display: grid;
+    grid-template-columns: 50px 1fr 40px;
+    padding: 10px 0px;
+}
+.product_img_mobile img{
+    width: 50px;
+    object-fit: cover;
+}
+.product_name_mobile{
+    padding-left: 20px;
+}
+.product_name_mobile p{
+    padding-top: 5px;
+}
+.tanggiam_soluong{
+    padding-top: 10px;
 }
 .foo{
     display: flex;
