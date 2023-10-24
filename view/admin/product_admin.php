@@ -45,9 +45,13 @@
                     <!-- phan trang -->
                     <div class="product_phantrang">
                         <ul>
-                            <p>Trang</p>
-                            
-                        
+                            <li class=" phantrang <?=($page<=1)?'disabled':''?>"><a href="admin.php?mod=product&act=admin_product&page=<?=$page-1?>"><<</a></li>
+                            <?php for($i=1; $i <$sotrang;$i++): ?>
+                                <li class=" phantrang <?=($page==$i)?'active':''?>">
+                                    <a href="admin.php?mod=product&act=admin_product&page=<?=$i?>"><?=$i?></a>
+                                </li>
+                            <?php endfor; ?>
+                            <li class=" phantrang <?=($page>=$sotrang)?'disabled':''?>"><a href="admin.php?mod=product&act=admin_product&page=<?=$page+1?>">>></a></li>
                         </ul>
                     </div>
                 </div>

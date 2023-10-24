@@ -53,11 +53,15 @@
 
   //lay ra san pham tu database hien len trong admin
   // hàm này lấy danh sách sản phẩm từ bảng sanpham, kèm theo thông tin tên danh mục từ bảng daanhmuc
-  function get_products(){
-    $sql = "SELECT sp.*, dm.tendm FROM sanpham sp  INNER JOIN daanhmuc dm ON sp.madanhmuc=dm.madm"; // cau lenh
+  function get_products($page=1){
+    $batdau = ($page - 1) * 8;
+    $sql = "SELECT sp.*, dm.tendm FROM sanpham sp  INNER JOIN daanhmuc dm ON sp.madanhmuc=dm.madm LIMIT $batdau,4"; // cau lenh
     return pdo_query($sql);
   }
 
+  function product_countadmin(){
+    return pdo_query_value("SELECT COUNT(*) FROM sanpham");
+  }
   //lay sp nay ra de edit
   //hàm này giúp bạn lấy thông tin chi tiết của một sản phẩm cụ thể từ bảng sanpham, kèm theo tên danh mục tương ứng từ bảng daanhmuc
   function get_product($id){

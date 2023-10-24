@@ -135,9 +135,9 @@
                                         </ul>
                                     </a>
                                 </li>
-                                <li class="header-right-login">
-                                    <a href="index.php?mod=user&act=login"><i class="fa-regular fa-user"></i></a>
-                                    <ul class="header-right-login-con">
+                                <li class="header-right-login ">
+                                    <i onclick="my_drop_user()" class="fa-regular fa-user"></i>
+                                    <ul class="header-right-login-con" id="drop_login" >
                                         <?=$logined?>
                                     </ul>
                                 </li>

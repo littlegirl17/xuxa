@@ -95,12 +95,18 @@
                     </div>
                 </div>
                 <div class="danhmuc-box-right">
+                    <!-- <div>
+                        <select class="select-filter" name="" id="select-filter">
+                            <option value="0">Lọc theo</option>
+                            <option value="?kytu=asc">Ký tự A-Z</option>
+                            <option value="?kytu=desc">Ký tự Z-A</option>
+                            <option value="?gia=asc">Giá tăng dần</option>
+                            <option value="?gia=desc">Giá giảm dần</option>
+                        </select>
+                    </div> -->
                     <div class="dm-title">
-                <!-- truy xuất tên danh mục cho một danh mục cụ thể -->
-                    <?=$name_cata?>
-                    </div>
-                    <div class="dm-title-box">
-                    
+                        <!-- truy xuất tên danh mục cho một danh mục cụ thể -->
+                        <?=$name_cata?>
                     </div>
                     <div class="box-danhmuc-three">
                         <div class="box row">

@@ -35,7 +35,13 @@
                 $danhmuc_list = get_catalog();
                 $name_cata = gettend($madanhmuc); //dùng để lấy cái tên riêng của từng danh mục khi click
                 
-                //$danhmuc_name = get_name();
+                // //filter
+                // if(isset($_GET['kytu'])){
+                //     $kytu = $_GET['kytu'];
+                // }else{
+                //     //Nếu nó không tồn tại $_get['kytu'] thì minhse cho nó hiện ra ttrang danh mục như cũ
+                //     $productlist = get_cata_sp($madanhmuc,$keyword);
+                // }
                 include_once 'view/template_head.php';
                 include_once 'view/template_header.php';
                 include_once 'view/product_danhmuc.php';
@@ -199,18 +205,14 @@
                 break;
 
             case 'admin_product': // (san pham)
-                // if(!(isset($_SESSION['user']) && $_SESSION['user']['quyen']>=1)){
-                //     header("location: index.php");
-                // }
-
-                // if(isset($_GET['page']) && ($_GET['page'])!=""){
-                //     $soluong = count_products()['soluong'];
-                //     $sotrang = ceil($soluong / 2);
-                //     ($_GET['page']-1)*2,2);
                 
-                // }
-                $data['dssp'] = get_products();
-
+                //Chuyển trang
+                $page = 1; //nếu chưa truyền thì mặc định cho ns bằng 1
+                if(isset($_GET['page']) && ($_GET['page']>=1)){ //Nếu truyền rồi
+                    $page = $_GET['page'];
+                }
+                $data['dssp'] = get_products($page);
+                $sotrang = ceil(product_countadmin()/4);
                 include_once 'view/admin/template_admin_head.php';
                 include_once 'view/admin/template_admin_header.php';
                 include_once 'view/admin/product_admin.php';
@@ -484,7 +486,8 @@
                 include_once 'view/admin/template_admin_header.php';
                 include_once 'view/admin/product_admin_catagory.php';
                 break;
-
+            
+            //Phân trang
             
             default:
             // nếu sự lựa chọn không có trong case thì cho chuyển về home

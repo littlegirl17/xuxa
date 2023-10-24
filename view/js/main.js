@@ -6,6 +6,9 @@ document.querySelector('#btn_dots').addEventListener('click', function(){
     document.querySelector('.nav_dots').classList.toggle('active_dots');
 });
 
+function my_drop_user() {
+    document.getElementById("drop_login").classList.toggle("show_login");
+}
 //
 var index = 0;
 function slideshow(){
@@ -29,6 +32,7 @@ window.addEventListener("scroll", function () { //Khi trang web được cuộn,
         headerSearch.style.display = "block"; // Hiển thị header-search khi cuộn về đầu trang
     }
 });
+
 
 
 

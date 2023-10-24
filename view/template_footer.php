@@ -45,5 +45,28 @@
         <script src="view/js/main.js"></script>
         <script src="view/js/cart.js"></script>
         <script src="view/js/checkform.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!--Jquery-->
+        <!-- Filter danh mục -->
+        <!-- <script>
+            //$(document).ready(function(){
+           //     var active = location.search;
+        //        $('#select-filter option[value="'+active+'"]').attr('selected','selected');
+         //   })
+            //đầu tiên lấy giá trị của từng selected về là cái value
+            $('.select-filter').change(function(){
+                var value = $(this).find(':selected').val(); //value=this nghĩa là khi  $('.select-filter') thì nó sẽ thay đổi // thực thi trong hàm// selected là đã chọn
+                //alert(value); đã lấy đc gia trị
+                
+                //dùng để thêm url vào url hiện tại
+                if(value!=0){
+                    var url = value;
+                    window.location.replace(url);//http://localhost:8080/PHP1/asignment/mohinhMVC%20-%20Copy/index.php?mod=product&act=danhmuc&madanhmuc=1/?kytu=asc
+                }else{
+                    //nếu nó =0 là nó chọn vào value=--lọc theoi--
+                    alert("Hãy lọc sản phẩm");
+                }
+            })
+            
+        </script> -->
 </body>
 </html>
