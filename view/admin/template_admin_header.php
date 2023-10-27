@@ -50,5 +50,25 @@
             </div>
         </div>
     </article>
+
+    <article>
+        <div class="bar_admin" style="padding-top: 85px;color:black;">
+            <label for="admin_checkbox"><i class="fa-solid fa-bars"></i></label>  
+        </div>
+        <input type="checkbox" hidden name="" class="admin_hidden_chek" id="admin_checkbox">
+    
+        <div class="admin-article-mobile">
+            <ul>
+                <li><a href="admin.php?mod=page&act=dashboard" >DASHBOARD</a></li>
+                <li><a href="admin.php?mod=product&act=admin_catagory" >Danh mục</a></li>
+                <li><a href="admin.php?mod=product&act=admin_product" >Sản phẩm</a></li>
+                <li><a href="admin.php?mod=user&act=login_admin" >Tài khoản</a></li>
+                <li><a href="admin.php?mod=product&act=binhluan_admin" >Bình luận</a></li>
+                <li><a href="admin.php?mod=product&act=donhang_admin" >Đơn hàng</a></li>
+                <li><a href="admin.php?mod=product&act=thongke" >Thống kê</a></li>
+                <li><a href="index.php" >Thoát</a></li>
+            </ul>
+        </div>
+    </article>
     
         

@@ -30,6 +30,13 @@ body {
 .pb{ /*padding bottom*/
     padding-bottom: 20px;
 }
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+.bar_admin{
+    display: none;
+}
+.admin-article-mobile{
+    display: none;
+}
 /*---------------------------------------------------------------------------------------------------------------------------*/
 .table_mobile{
     display: none;
@@ -1283,8 +1290,8 @@ tr td{
     flex-direction: row;
 }
 .header_admin_name{
-    width: 50px;
-    height: 20px;
+    /* width: 50px;
+    height: 20px; */
 }
 .header_admin_name img{
     display: flex;
@@ -1305,23 +1312,21 @@ tr td{
     color: #ffffff;
 }
 /**/
-.table-dssp  table{
-    
-}
+
 .table-dssp  table  {
-    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    
 }
 
 
 /*danhmuc-admin*/
 .product_admin_cata{
-    padding-left: 50px;
+    padding-left: 150px;
     
 }
 .table_ad_cata{
     display: flex;
     flex-direction: row;
-    width: 1000px;
+    width: 100%;
     border: 1px solid black;
 }
 .admin_cata_one{
@@ -1364,7 +1369,7 @@ tr td{
 /**/
 .header_admin_fixed{
     position: fixed;
-    background-color: #00bbff;
+    background-color: #2A2B39;
     height: 80px;
     width: 100%;
 }
@@ -1399,6 +1404,7 @@ tr td{
     bottom: 0px;
     top: 0px;
     position: fixed;
+    z-index: 10000;
 }
 .admin-article-left{
     padding-top: 100px;
@@ -1417,8 +1423,8 @@ tr td{
 }
 /**/
 .table-dssp{
-    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-    padding: 100px 20px;
+   
+    padding: 100px 20px; 
 }
 .add-sp {
   padding: 20px 0px;
@@ -2324,15 +2330,56 @@ header{
 
 
 .container-header{
-     width: 1170px;
+    width: 1170px;
     margin: 0 auto;
     padding: 0px 20px;
 }
 
 /*tablet*/
 @media screen and (max-width:1180px) {
-
-   
+    .admin-article{
+        display: none;
+    }
+    .bar_admin{
+        display: block;
+        font-size: 2em;
+        padding-left: 20px;
+    }
+    .admin-article-mobile{
+        display: block;
+    }
+    .table-dssp{
+        padding: 205px 20px; 
+    }
+    .product_admin_cata{
+        margin-top: -215px;
+        padding-left:  144px;
+        width: 100%;
+    }
+    .admin-article-mobile{
+        background-color: #2A2B39;
+        position: absolute;
+        top: 130px;
+        left: 0px;
+        bottom: 0px;
+        width: 156px;
+        height: auto;
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: transform ease-in-out 0.5s , opacity linear 0.5s;
+    }
+    .admin_hidden_chek:checked ~ .admin-article-mobile{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    .admin-article-mobile ul li{
+        list-style: none;
+        padding:  15px 0;
+    }
+    .admin-article-mobile ul li a{
+        text-decoration: none;
+        color: #fff;
+    }
     .bannertext{
         min-width: 1180px;
     }
